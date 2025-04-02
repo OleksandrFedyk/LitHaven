@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DarkGray2"
+    tools:context=".EpisodeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/episodeFragmentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/BrightBlue"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/episodeFragmentText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/episodeFragmentTitle"
+            android:lineSpacingExtra="4dp"
+            android:lineSpacingMultiplier="1.2"
+            android:textSize="16sp"
+            android:textColor="@color/BrightGray"
+            android:gravity="start"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false"
+            android:ellipsize="none"
+            android:inputType="textMultiLine"
+            android:breakStrategy="high_quality"
+            android:justificationMode="inter_word">
+            
+        </TextView> <!-- Для вирівнювання тексту -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

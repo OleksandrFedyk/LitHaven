@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.firstapp.fragments.HomeFragment"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_homeFragment_to_recycleViewItemClicked"
+            app:destination="@+id/recycle_view_item_clicked" />
+        
+    </fragment>
+    <fragment
+        android:id="@+id/nav_create"
+        android:name="com.example.firstapp.fragments.CreateFragment"
+        tools:layout="@layout/fragment_create">
+        <action
+            android:id="@+id/action_createFragment_to_recycleViewItemClicked"
+            app:destination="@+id/recycle_view_item_clicked" />
+        <action
+            android:id="@+id/action_createFragment_to_addChapterButton"
+            app:destination="@+id/add_chapter_button" />
+
+        <action
+            android:id="@+id/action_createFragment_to_editStory"
+            app:destination="@+id/editStory" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_myColection"
+        android:name="com.example.firstapp.fragments.LibraryFragment"
+        tools:layout="@layout/fragment_library" >
+        <action
+            android:id="@+id/action_libraryFragment_to_recycleViewItemClicked"
+            app:destination="@+id/recycle_view_item_clicked" />
+
+        <action
+            android:id="@+id/action_libraryFragment_to_libraryLickedFragment"
+            app:destination="@+id/libraryLickedFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_notification"
+        android:name="com.example.firstapp.fragments.NotificationFragment"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.example.firstapp.fragments.SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_recycleViewItemClicked"
+            app:destination="@+id/recycle_view_item_clicked">
+            <argument
+                android:name="bookId"
+                app:argType="string">
+            </argument>
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_create_new_story"
+        android:name="com.example.firstapp.CreateNewStory"
+        tools:layout="@layout/fragment_create_new_story">
+
+    </fragment>
+    <fragment
+        android:id="@+id/recycle_view_item_clicked"
+        android:name="com.example.firstapp.fragments.RecycleViewItemClicked"
+        tools:layout="@layout/fragment_recycle_view_item_clicked">
+        <argument
+            android:name="bookId"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_recycleViewItemClicked_to_itemClickedEpisodes"
+            app:destination="@id/item_clicked_episodes">
+            <argument
+                android:name="bookId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_recycleViewItemClickedAuthor_to_authorPage"
+            app:destination="@id/accountFragment">
+            <argument
+                android:name="authorId"
+                app:argType="string" />
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/item_clicked_preview"
+        android:name="com.example.firstapp.item_clicked_preview"
+        tools:layout="@layout/fragment_item_clicked_preview">
+        <argument
+            android:name="bookId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/item_clicked_episodes"
+        android:name="com.example.firstapp.item_clicked_episodes"
+        tools:layout="@layout/fragment_item_clicked_episodes">
+        <argument
+            android:name="bookId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_itemClickedEpisodes_to_episodeDetailsFragment"
+            app:destination="@id/episodeFragment">
+            <argument
+                android:name="chapterID"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/add_chapter_button"
+        android:name="com.example.firstapp.add_chapter_button"
+        tools:layout="@layout/fragment_add_chapter_button" >
+        <argument
+            android:name="bookId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/editStory"
+        android:name="com.example.firstapp.fragments.editStory"
+        tools:layout="@layout/fragment_edit_story">
+        <argument
+            android:name="bookId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/libraryHistoryFragment"
+        android:name="com.example.firstapp.fragments.LibraryHistoryFragment"
+        tools:layout="@layout/fragment_library_history" >
+
+        <action
+            android:id="@+id/action_libraryHistoryFragment_to_recycleViewItemClicked"
+            app:destination="@+id/recycle_view_item_clicked" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/libraryLickedFragment"
+        android:name="com.example.firstapp.fragments.LibraryLickedFragment"
+        tools:layout="@layout/fragment_library_licked" >
+        <action
+            android:id="@+id/action_libraryLickedFragment_to_recycleViewItemClicked"
+            app:destination="@+id/recycle_view_item_clicked" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.firstapp.AccountFragment"
+        tools:layout="@layout/fragment_account" >
+
+        <argument
+            android:name="authorId"
+            app:argType="string" />
+
+        <action android:id="@+id/action_accountFragment_to_recycleViewItemClicked"
+            app:destination="@+id/recycle_view_item_clicked" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/episodeFragment"
+        android:name="com.example.firstapp.EpisodeFragment"
+        tools:layout="@layout/fragment_episode">
+        <argument
+            android:name="chapterID"
+            app:argType="string">
+
+        </argument>
+        <argument
+            android:name="bookId"
+            app:argType="string">
+
+        </argument>
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteAuthors"
+        android:name="com.example.firstapp.FavoriteAuthors"
+        tools:layout="@layout/fragment_favorite_authors">
+        <action
+            android:id="@+id/action_favoriteAuthors_to_favAuthorFragment"
+            app:destination="@+id/accountFragment">
+            <argument
+                android:name="authorId"
+                app:argType="string" />
+        </action>
+
+    </fragment>
+
+</navigation>

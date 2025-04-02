@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="GenreChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_background_selector</item>
+        <item name="android:textColor">@color/genre_chip_text</item>
+        <item name="chipStrokeColor">@color/genre_chip_border</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:paddingHorizontal">8dp</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="checkedIconVisible">false</item>
+    </style>
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/DarkGray2</item> <!-- Колір вашого Toolbar -->
+        <item name="colorOnPrimary">@android:color/white</item> <!-- Білий текст та іконки -->
+    </style>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="#FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:background="@color/Coal">
+
+        <TextView
+            android:id="@+id/recycle_view_itemTitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="TextView"
+            android:breakStrategy="simple"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:textColor="@color/BrightGray"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/recycle_view_itemImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/recycle_view_itemDescription"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:breakStrategy="simple"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:singleLine="false"
+            android:text="аіаіаіаіаіаіаі"
+            android:textColor="@color/DarkerBrightGray"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/recycle_view_itemTitleText"
+            app:layout_constraintTop_toBottomOf="@+id/recycle_view_itemTitleText" />
+
+        <ImageView
+            android:id="@+id/recycle_view_itemImage"
+            android:layout_width="100dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/books_book_svgrepo_com" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@color/Coal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/finishButton"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@color/DarkGray"
+            android:text="Finish Story"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createdStoryItemImage" />
+
+        <ImageView
+            android:id="@+id/createdStoryItemImage"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/account_svgrepo_com" />
+
+        <TextView
+            android:id="@+id/createdStoryItemTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="start"
+            android:text="@string/story_title"
+            android:textColor="@color/BrightGray"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/finishButton"
+            app:layout_constraintEnd_toStartOf="@+id/addNewChapterButton"
+            app:layout_constraintStart_toEndOf="@+id/createdStoryItemImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/addNewChapterButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/editStoryButtonItem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:srcCompat="@drawable/baseline_format_list_bulleted_add_24" />
+
+        <ImageButton
+            android:id="@+id/editStoryButtonItem"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/finishButton"
+            app:layout_constraintEnd_toEndOf="@+id/addNewChapterButton"
+            app:layout_constraintTop_toBottomOf="@+id/addNewChapterButton"
+            app:srcCompat="@drawable/baseline_edit_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

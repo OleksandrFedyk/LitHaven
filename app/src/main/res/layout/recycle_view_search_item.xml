@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Coal">
+
+        <ImageView
+            android:id="@+id/recycleViewSearchImg"
+            android:layout_width="75dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/recycleViewSearchTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="start"
+            android:breakStrategy="simple"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:text="title"
+            android:textColor="@color/BrightGray"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/recycleViewSearchDescription"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/recycleViewSearchDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:breakStrategy="simple"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:singleLine="false"
+            android:text="TextView"
+            android:textColor="@color/DarkerBrightGray"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/recycleViewSearchImg"
+            app:layout_constraintTop_toBottomOf="@+id/recycleViewSearchTitle" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/recycleViewSearchGenres"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/recycleViewSearchDescription"
+            app:layout_constraintTop_toBottomOf="@+id/recycleViewSearchDescription"
+            app:singleLine="true"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

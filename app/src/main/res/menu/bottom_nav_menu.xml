@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@drawable/baseline_search_24"
+        android:title="@string/search" />
+    <item
+        android:id="@+id/libraryLickedFragment"
+        android:icon="@drawable/baseline_library_books_24"
+        android:title="@string/my_collecton" />
+    <item
+        android:id="@+id/nav_create"
+        android:icon="@drawable/baseline_create_24"
+        android:title="@string/create_story" />
+<!--    <item-->
+<!--        android:id="@+id/nav_notification"-->
+<!--        android:icon="@drawable/baseline_notifications_24"-->
+<!--        android:title="@string/notifications" />-->
+</menu>

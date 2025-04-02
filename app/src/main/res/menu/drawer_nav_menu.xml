@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view"
+    android:id="@+id/drawer_nav_menu">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group">
+        <item
+            android:id="@+id/nav_history"
+            android:title="History"
+            android:icon="@drawable/baseline_history_24" />
+        <item
+            android:id="@+id/nav_favBooks"
+            android:title="Favorite Books"
+            android:icon="@drawable/baseline_thumb_up_24_black" />
+        <item
+            android:id="@+id/nav_favAuthors"
+            android:title="Favorite Authors"
+            android:icon="@drawable/baseline_favorite_24" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group2">
+        <item
+            android:id="@+id/nav_logOut"
+            android:title="Log Out"
+            android:icon="@drawable/baseline_logout_24_black" />
+
+    </group>
+
+</menu>

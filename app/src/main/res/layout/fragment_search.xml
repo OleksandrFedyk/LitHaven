@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DarkGray2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/DarkGray2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".fragments.SearchFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/DarkGray2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/DarkGray2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:id="@+id/scrollView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_view">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/genreChipGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:chipSpacing="8dp"
+                    app:singleLine="true"
+                    app:singleSelection="false">
+
+                    <!-- Fantasy -->
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_fantasy"
+                        style="@style/GenreChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fantasy" />
+
+                    <!-- Drama -->
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_drama"
+                        style="@style/GenreChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Drama" />
+
+                    <!-- Horror -->
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_horror"
+                        style="@style/GenreChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Horror" />
+
+                    <!-- Romance -->
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_romance"
+                        style="@style/GenreChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Romance" />
+
+                    <!-- Science Fiction -->
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_scifi"
+                        style="@style/GenreChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sci-Fi" />
+
+                    <!-- Thriller -->
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_thriller"
+                        style="@style/GenreChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thriller" />
+
+                    <!-- Mystery -->
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_mystery"
+                        style="@style/GenreChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mystery" />
+
+                    <!-- Historical -->
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_historical"
+                        style="@style/GenreChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Historical" />
+
+                    <!-- Adventure -->
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_adventure"
+                        style="@style/GenreChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adventure" />
+
+                    <!-- Comedy -->
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_comedy"
+                        style="@style/GenreChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comedy" />
+
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+
+            <!--        <ScrollView-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginStart="8dp"-->
+            <!--            android:layout_marginTop="16dp"-->
+            <!--            android:layout_marginEnd="8dp"-->
+            <!--            app:layout_constraintEnd_toEndOf="parent"-->
+            <!--            app:layout_constraintStart_toStartOf="parent"-->
+            <!--            app:layout_constraintTop_toBottomOf="@+id/scrollView3">-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerSearchView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView3">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <!--        </ScrollView>-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
